@@ -20,7 +20,7 @@ class Solution {
                 maxIndex = i
             }
         }
-        return  _trap(height.sliceArray(0..maxIndex)) + _trap(height.sliceArray(maxIndex..height.lastIndex).reversedArray())
+        return _trap(height.sliceArray(0..maxIndex)) + _trap(height.sliceArray(maxIndex..height.lastIndex).reversedArray())
     }
 
     fun _trap(height: IntArray): Int {
@@ -45,7 +45,7 @@ class Solution {
                     j = mj
                     break
                 }
-                curRain +=  iValue - height[mj]
+                curRain += iValue - height[mj]
             }
 
             if (j > 0) {
@@ -63,6 +63,7 @@ class Solution {
 
 
 fun main() {
-    println(    Solution().trap(intArrayOf(0,1,0,2,1,0,1,3,2,1,2,1))
+    println(
+        Solution().trap(intArrayOf(0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1))
     )
 }
